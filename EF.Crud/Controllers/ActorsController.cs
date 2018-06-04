@@ -72,7 +72,7 @@ namespace EF.Crud.Controllers
             return CreatedAtRoute("GetActor", new { id = outputModel.Id }, outputModel);
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public IActionResult Update(int id, [FromBody]ActorUpdateInputModel inputModel)
         {
             if (inputModel == null || id != inputModel.Id)
